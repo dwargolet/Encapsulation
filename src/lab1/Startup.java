@@ -5,7 +5,7 @@ package lab1;
  * proper encapsulation and the other best practices as explained by 
  * your instructor.
  *
- * @author      Jim Lombardo, WCTC Instructor
+ * @author      Jim Lombardo, WCTC Instructor MODIFIED BY DANIEL WARGOLET
  * @version     1.01
  */
 public class Startup {
@@ -20,15 +20,16 @@ public class Startup {
             not have to be a GUI class.
         */
         
-        EmployeeStatus employee = new EmployeeStatus();
+        EmployeeStatus employee = new EmployeeStatus("Peter", "Piper", "392-333-1234",
+        "03/27/1990");
         
-        employee.setFirstName = "Peter";
-        employee.setLastName = "Piper";
-        employee.ssn = "333-1234";
+
         employee.setCubeId("141");
-        employee.goThroughOrientation();
-        employee.setFirstName("Peter");
-        System.out.println("The employee's status is: " + employee.getStatus());
+        
+        employee.setMetWithHr(false);
+       employee.goThroughOrientation();
+// System.out.println("The employee's status is: " + employee.getStatus());
+        
     }
     
     

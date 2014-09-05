@@ -1,6 +1,5 @@
 package lab1;
 
-import java.util.Date;
 
 /**
  * In this lab your challenge is to fix the code in both classes to use
@@ -16,7 +15,12 @@ public class Employee {
     private String ssn;
     private String birthDate;
 
-    
+    public Employee(String firstName, String lastName, String ssn, String birthDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ssn = ssn;
+        this.birthDate = birthDate;
+    }
 
     public String getFirstName() {
         return firstName;

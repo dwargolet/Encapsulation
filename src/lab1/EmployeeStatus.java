@@ -1,10 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package lab1;
+
+/**This class extends the employee class.  All of the basic employee info is
+ * entered with the Employee class, allowing for other Classes to be created
+ * such as something for insurance ect.. created a method "goThroughOrientation"
+ * allowing for 
+ */
+
 
 /**
  *
@@ -17,44 +19,27 @@ public class EmployeeStatus extends Employee{
     private boolean reviewedDeptPolicies;
     private boolean movedIn;
     private String cubeId;
-    
 
-//    public EmployeeStatus(boolean metWithHr, boolean metDeptStaff, boolean reviewedDeptPolicies, boolean movedIn, String cubeId) {
-//        this.metWithHr = metWithHr;
-//        this.metDeptStaff = metDeptStaff;
-//        this.reviewedDeptPolicies = reviewedDeptPolicies;
-//        this.movedIn = movedIn;
-//        this.cubeId = cubeId;
-//    }
-//    
-    
-    public boolean isMetWithHr() {
-        return metWithHr;
+    public EmployeeStatus(String firstName, String lastName, String ssn, String birthDate) {
+        super(firstName, lastName, ssn, birthDate);
     }
+     
+
 
     public void setMetWithHr(boolean metWithHr) {
         this.metWithHr = metWithHr;
     }
 
-    public boolean isMetDeptStaff() {
-        return metDeptStaff;
-    }
 
     public void setMetDeptStaff(boolean metDeptStaff) {
         this.metDeptStaff = metDeptStaff;
     }
 
-    public boolean isReviewedDeptPolicies() {
-        return reviewedDeptPolicies;
-    }
     
     public void setReviewedDeptPolicies(boolean reviewedDeptPolicies) {
         this.reviewedDeptPolicies = reviewedDeptPolicies;
     }
 
-    public boolean isMovedIn() {
-        return movedIn;
-    }
 
     public void setMovedIn(boolean movedIn) {
         this.movedIn = movedIn;
@@ -75,9 +60,7 @@ public class EmployeeStatus extends Employee{
         moveIntoCubicle(cubeId);
         getStatus();
     }
-    
-    
-    
+ 
     // Assume this must be performed first
     private void meetWithHrForBenefitAndSalryInfo() {
         metWithHr = true;
@@ -123,7 +106,9 @@ public class EmployeeStatus extends Employee{
            && reviewedDeptPolicies && movedIn) {
             return "Orientation is complete";
         } else {
-            return "Orientation in progress...";
+           return ("Orientation in progress...");
         }
     }
+    
+    
 }
