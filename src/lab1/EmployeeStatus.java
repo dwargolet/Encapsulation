@@ -13,10 +13,10 @@ package lab1;
  */
 public class EmployeeStatus extends Employee{
     
-    private boolean metWithHr;
-    private boolean metDeptStaff;
-    private boolean reviewedDeptPolicies;
-    private boolean movedIn;
+    private boolean metWithHr = false;
+    private boolean metDeptStaff = false;
+    private boolean reviewedDeptPolicies = false;
+    private boolean movedIn = false;
     private String cubeId;
 
     public EmployeeStatus(String firstName, String lastName, String ssn, String birthDate) {
@@ -66,9 +66,7 @@ public class EmployeeStatus extends Employee{
 
     // Assume this is must be performed second
     private void meetDepartmentStaff() {
-        if(metWithHr) {
-            metDeptStaff = true;
-        } else {
+        if(metWithHr == false) {
             System.out.println("Sorry, you cannot meet with "
                     + "department staff until you have met with HR.");
         }

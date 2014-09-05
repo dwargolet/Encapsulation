@@ -24,10 +24,10 @@ public class Startup {
         "03/27/1990");
         employee.setCubeId("141");
         
-       employee.setMetWithHr(true);
-         
-       employee.goThroughOrientation();
-// System.out.println("The employee's status is: " + employee.getStatus());
+        employee.setMetWithHr(true);
+        employee.setMetDeptStaff(true); 
+        
+        employee.goThroughOrientation();
         
     }
     
