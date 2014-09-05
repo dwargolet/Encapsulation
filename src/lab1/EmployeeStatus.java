@@ -1,4 +1,3 @@
-
 package lab1;
 
 /**This class extends the employee class.  All of the basic employee info is
@@ -25,11 +24,14 @@ public class EmployeeStatus extends Employee{
     }
      
 
-
+//allows for user to input if the employee did this or not
     public void setMetWithHr(boolean metWithHr) {
         this.metWithHr = metWithHr;
     }
 
+    public boolean isMetWithHr() {
+        return metWithHr;
+    }
 
     public void setMetDeptStaff(boolean metDeptStaff) {
         this.metDeptStaff = metDeptStaff;
@@ -53,18 +55,14 @@ public class EmployeeStatus extends Employee{
         this.cubeId = cubeId;
     }
     
+    //public method that checks/puts the employee through orientation
     public void goThroughOrientation(){
-        meetWithHrForBenefitAndSalryInfo();
         meetDepartmentStaff();
         reviewDeptPolicies();
         moveIntoCubicle(cubeId);
-        getStatus();
+        System.out.println(getStatus());
     }
  
-    // Assume this must be performed first
-    private void meetWithHrForBenefitAndSalryInfo() {
-        metWithHr = true;
-    }
 
     // Assume this is must be performed second
     private void meetDepartmentStaff() {
@@ -101,12 +99,12 @@ public class EmployeeStatus extends Employee{
 
     }
 
-    public String getStatus() {
+    private String getStatus() {
         if(metWithHr && metDeptStaff
            && reviewedDeptPolicies && movedIn) {
             return "Orientation is complete";
         } else {
-           return ("Orientation in progress...");
+           return "Orientation in progress...";
         }
     }
     

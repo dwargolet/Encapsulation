@@ -22,11 +22,10 @@ public class Startup {
         
         EmployeeStatus employee = new EmployeeStatus("Peter", "Piper", "392-333-1234",
         "03/27/1990");
-        
-
         employee.setCubeId("141");
         
-        employee.setMetWithHr(false);
+       employee.setMetWithHr(true);
+         
        employee.goThroughOrientation();
 // System.out.println("The employee's status is: " + employee.getStatus());
         
