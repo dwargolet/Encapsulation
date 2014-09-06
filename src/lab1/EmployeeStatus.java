@@ -94,7 +94,6 @@ public class EmployeeStatus extends Employee{
                     + "and then with department staff, and then reviewed"
                     + "department policies.");
         }
-
     }
 
     private String getStatus() {

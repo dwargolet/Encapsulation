@@ -52,13 +52,6 @@ public class Employee {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
-    }
-
-   
-
-    
-    
-    
-    
+    }   
     
 }
